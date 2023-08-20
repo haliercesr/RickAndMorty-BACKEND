@@ -20,6 +20,10 @@ module.exports = (sequelize) => {
             password: {
                 type: DataTypes.STRING,
                 allowNull: false,
+            },
+            name: {
+                type: DataTypes.STRING,
+                allowNull: false,
             }
         },
         {
