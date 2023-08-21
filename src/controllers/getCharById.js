@@ -32,6 +32,7 @@ axios.get(characterURL+`${id}`)
 module.exports =async (req,res)=>{
   // es una sting, por eso hay que convertirla a numero CUIDADO CON ESO.
   const Id=Number(req.params.id) 
+  
 
   try{          //try seria similar a .then en promesas, luego ponemos un await en la peticion de axios para decirle "hasta que no termine la promesa no se ejecuta lo demas" y la guardamos en data
     
