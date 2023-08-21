@@ -22,7 +22,7 @@ const router=Router()
 router.use("/post",postrouter) //lo mismo para las post
 */
 
-router.get('/character/:id', getCharById); //no hace falta poner la ruta completa. Por ejemplo un router userrouter al poner las rutas se puede omitir "/users" y  poner solo / porque ya se entiende que estamos en /USERS
+router.get('/character/:id',getCharById); //no hace falta poner la ruta completa. Por ejemplo un router userrouter al poner las rutas se puede omitir "/users" y  poner solo / porque ya se entiende que estamos en /USERS
 router.get('/',login);
 router.post('/Register',postUser);
 router.post('/fav', postFav);
