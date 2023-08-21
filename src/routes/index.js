@@ -4,7 +4,6 @@ const login=require('../controllers/login');
 const postUser =require('../controllers/postUser');
 const postFav= require ('../controllers/postFav');
 const deleteFav=require('../controllers/deleteFav');
-const nombre=require('../controllers/nombre');
 
 
 
@@ -24,7 +23,6 @@ router.use("/post",postrouter) //lo mismo para las post
 */
 
 router.get('/git', getCharById); //no hace falta poner la ruta completa. Por ejemplo un router userrouter al poner las rutas se puede omitir "/users" y  poner solo / porque ya se entiende que estamos en /USERS
-router.get('/home',nombre);
 router.get('/',login);
 router.post('/Register',postUser);
 router.post('/fav', postFav);

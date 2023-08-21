@@ -16,7 +16,7 @@ const postUser= async (req,res)=>{
     },
    })
    if (created){
-    return res.status(201).json({created})
+    return res.status(201).json({created,createdUser})
    } else{
     return res.status(200).json({created})
    }
