@@ -34,7 +34,7 @@ server.use(express.json())
 /* REQUEST-->MORGAN-->CORS-->EXPRESS.JSON-->RUTA('/rickandmorty')*/
 server.use('/',router)  //la request pasa por los middelware (cors y express y luego viene a mi router)
 
-server.listen(PORT, async () => {
+server.listen(PORT,"0.0.0.0", async () => {
     await conn.sync({force:true })
     console.log("server raised in port " + PORT)
 })
