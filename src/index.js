@@ -2,11 +2,11 @@ const express = require('express');
 const morgan = require("morgan");
 const router = require('./routes');
 
-const {conn}= require('./DB_connection')  //para la coneccion hay que tener en cuenta que sequelize trabaja de forma asincronica pos eso hay que manejar un async await.
+
 
 const server = express() //instancia de experess
 require('dotenv').config()
-const {PORT}=process.env || 3001; //javascript se maneja mucho con valores por default, si la variable PORT no esta definida entonces se usara el puerto por default, en este caso "3001"
+
 const cors=require('cors') 
 //cada modulo cumple de una responsabilidad unica, este modulo se encarga de levantar el servidor
 /*EN LA CARPETA 'CONTROLLERS' ESTAN LOS CONTROLADORES QUE VAMOS A USAR EN LA Callback DE LOS METODOS SERVER.GET,POST,PUT O DELETE, SE ENCARGAN DE COMO ENVIAMOS Y RECIBIMOS LA INFORMACION TANTO DE LA BASE DE DATOS COMO DEL CLIENTE O API */
@@ -34,10 +34,8 @@ server.use(express.json())
 /* REQUEST-->MORGAN-->CORS-->EXPRESS.JSON-->RUTA('/rickandmorty')*/
 server.use('/',router)  //la request pasa por los middelware (cors y express y luego viene a mi router)
 
-server.listen(PORT,"0.0.0.0", async () => {
-    await conn.sync({force:true })
-    console.log("server raised in port " + PORT)
-})
+module.exports=server
+
 
 //server.post("/", (req,res) => {
 //    res.status(202).json(req.body)
