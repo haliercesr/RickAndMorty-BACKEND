@@ -13,7 +13,8 @@ const favoriteModel= require('./models/Favorite') //guardamos las funciones
 // URL ----> postgres://DB_USER:DB_PASSWORD@DB_HOST/rickandmorty
 const sequelize = new Sequelize(
    // URL
-   DB_DEPLOY,
+   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/dogs`,
+   //DB_DEPLOY,
    { logging: false, native: false }   //
 );
 
