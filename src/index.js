@@ -5,7 +5,7 @@ const router = require('./routes');
 
 
 const server = express() //instancia de experess
-require('dotenv').config()
+
 
 const cors=require('cors') 
 //cada modulo cumple de una responsabilidad unica, este modulo se encarga de levantar el servidor
