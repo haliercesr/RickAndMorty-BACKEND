@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "nodemon index.js",
-    "comentario":" NODEMON TIENE PROBLEMAS CON RAILWAY, POR ESO EN VES DE NODEMON USAMOS NODE"    
+    "comentario": " NODEMON TIENE PROBLEMAS CON RAILWAY, POR ESO EN VES DE NODEMON USAMOS NODE"
   },
   "author": "",
   "license": "ISC",
@@ -19,7 +19,7 @@
     "express": "^4.18.2",
     "morgan": "^1.10.0",
     "nodemon": "^3.0.1",
-    "pg": "^8.11.2",
+    "pg": "^8.11.3",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.32.1"
   }
