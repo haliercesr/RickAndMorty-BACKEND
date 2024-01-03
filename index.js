@@ -4,7 +4,7 @@ const PORT= 3001; //javascript se maneja mucho con valores por default, si la va
 const {conn}= require('./src/DB_connection.js')  //para la coneccion hay que tener en cuenta que sequelize trabaja de forma asincronica pos eso hay que manejar un async await.
 const server=require('./src/index.js') 
 
-server.listen(PORT,"0.0.0.0", async () => {
+server.listen(PORT, async () => {
 
     await conn.sync({force:true })
     console.log("server raised in port " + PORT)
