@@ -18,7 +18,7 @@ if(!loggedUser){
 }
 
     }catch(error){
-        return res.satus(500).json({error:error.message})
+        return res.status(500).json({error:error.message})
     }
 
 }
